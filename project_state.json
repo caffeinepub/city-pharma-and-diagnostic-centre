@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Multi-page responsive website for CITY PHARMA AND DIAGNOSTIC CENTRE using React, React Router, Tailwind CSS (orange & maroon theme), and Framer Motion. Includes 5 pages: Home, Medicine Services, Pathology, Ultrasound, and Our Doctors. Features animated SVG medical graphics, booking forms, pricing tables, doctor cards, sticky header, footer, and floating contact button.",
+  "architectural_notes": [
+    "React 18 + React Router v6 with Vite setup",
+    "Tailwind CSS with custom orange (#EA580C, #F97316) and maroon (#7F1D1D, #991B1B, #B91C1C) palette",
+    "Framer Motion for page transitions and element animations",
+    "Lucide React for icons; ui-avatars.com for doctor placeholder images",
+    "All forms are frontend-only with controlled state and success messages"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-configure-tailwind-css-with-a-custom-theme-extending-colors-orange-shades-ea580c-as-orange-600-f97316-as-orange-500-and-maroon-shades-7f1d1d-as-maroon-900-991b1b-as-maroon-800-b91c1c-as-maroon-700-install-and-configure-framer-motion-and-lucide-react-as-dependencies-set-up-react-router-v6-with-routes-for-medicine-pathology-ultrasound-and-doctors",
+      "title": "Configure Tailwind CSS with a custom theme extending colors: orange shades (#EA580C as orange-600, #F97316 as orange-500) and maroon shades (#7F1D1D as maroon-900, #991B1B as maroon-800, #B91C1C as maroon-700). Install and configure Framer Motion and Lucide React as dependencies. Set up React Router v6 with routes for '/', '/medicine', '/pathology', '/ultrasound', and '/doctors'.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-global-sticky-header-component-that-displays-the-logo-text-city-pharma-on-the-left-navigation-links-to-all-5-pages-home-medicine-pathology-ultrasound-doctors-on-desktop-and-a-hamburger-menu-toggling-a-mobile-nav-drawer-on-small-screens-include-a-continuously-animating-svg-heartbeat-polyline-in-the-header-style-with-the-orange-maroon-palette",
+      "title": "Create a global sticky header component that displays the logo text 'CITY PHARMA' on the left, navigation links to all 5 pages (Home, Medicine, Pathology, Ultrasound, Doctors) on desktop, and a hamburger menu toggling a mobile nav drawer on small screens. Include a continuously animating SVG heartbeat polyline in the header. Style with the orange/maroon palette.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-global-footer-component-with-the-centre-name-and-address-phone-number-9931918438-as-a-clickable-tel-link-quick-links-to-all-5-pages-and-social-media-placeholder-icons-facebook-instagram-twitter-using-lucide-react-style-consistently-with-the-orange-maroon-theme",
+      "title": "Create a global footer component with: the centre name and address, phone number 9931918438 as a clickable tel: link, quick links to all 5 pages, and social media placeholder icons (Facebook, Instagram, Twitter) using Lucide React. Style consistently with the orange/maroon theme.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-globally-rendered-floating-contact-button-fixed-to-the-bottom-right-corner-an-orange-circle-containing-a-phone-icon-lucide-react-linking-to-tel-9931918438-animate-it-with-a-subtle-pulse-using-framer-motion",
+      "title": "Create a globally rendered floating contact button fixed to the bottom-right corner: an orange circle containing a phone icon (Lucide React), linking to tel:9931918438. Animate it with a subtle pulse using Framer Motion.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-include-1-a-hero-banner-with-animated-svg-medical-graphics-floating-pills-a-stethoscope-icon-and-a-heartbeat-line-animated-via-svg-stroke-dasharray-stroke-dashoffset-using-framer-motion-plus-introductory-text-emphasizing-quality-healthcare-2-the-phone-number-9931918438-prominently-displayed-3-three-cta-buttons-book-now-links-to-pathology-contact-us-links-to-tel-9931918438-order-medicine-links-to-medicine-4-four-quick-access-service-cards-for-medicine-pathology-ultrasound-and-doctor-consultation-each-with-a-lucide-react-icon-and-a-react-router-link-to-the-corresponding-page-5-a-testimonials-section-with-3-patient-quotes-6-a-newsletter-signup-section-with-an-email-input-and-submit-button-frontend-only-shows-success-message-on-submit",
+      "title": "Build the Home page ('/'). Include: (1) A hero banner with animated SVG medical graphics — floating pills, a stethoscope icon, and a heartbeat line animated via SVG stroke-dasharray/stroke-dashoffset using Framer Motion — plus introductory text emphasizing quality healthcare. (2) The phone number 9931918438 prominently displayed. (3) Three CTA buttons: 'Book Now' (links to /pathology), 'Contact Us' (links to tel:9931918438), 'Order Medicine' (links to /medicine). (4) Four quick-access service cards for Medicine, Pathology, Ultrasound, and Doctor Consultation, each with a Lucide React icon and a React Router link to the corresponding page. (5) A testimonials section with 3 patient quotes. (6) A newsletter signup section with an email input and submit button (frontend-only, shows success message on submit).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-medicine-services-page-medicine-include-1-a-hero-section-with-animated-delivery-truck-and-pill-svg-lucide-icons-using-framer-motion-2-a-service-description-with-an-animated-pulsing-badge-reading-free-delivery-within-20-km-3-a-medicine-request-form-with-fields-name-text-contact-number-tel-address-textarea-medicine-name-text-prescription-upload-file-input-preferred-delivery-time-time-or-select-on-submit-show-a-success-confirmation-message-no-backend-call-4-an-animated-delivery-process-steps-section-showing-icons-with-connecting-arrows-e-g-order-verify-pack-deliver-animated-with-framer-motion",
+      "title": "Build the Medicine Services page ('/medicine'). Include: (1) A hero section with animated delivery truck and pill SVG/Lucide icons using Framer Motion. (2) A service description with an animated pulsing badge reading 'Free Delivery within 20 km'. (3) A medicine request form with fields: Name (text), Contact Number (tel), Address (textarea), Medicine Name (text), Prescription Upload (file input), Preferred Delivery Time (time or select). On submit, show a success confirmation message (no backend call). (4) An animated delivery process steps section showing icons with connecting arrows (e.g., Order → Verify → Pack → Deliver) animated with Framer Motion.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-pathology-services-page-pathology-include-1-a-hero-section-with-animated-lab-beaker-flask-svg-or-lucide-icons-using-framer-motion-2-a-card-based-pricing-table-for-blood-tests-cbc-200-lipid-profile-500-blood-sugar-fasting-80-blood-sugar-pp-80-hba1c-350-thyroid-profile-450-liver-function-test-600-kidney-function-test-600-complete-hemogram-300-and-urine-tests-routine-urine-examination-100-urine-culture-sensitivity-400-urine-pregnancy-test-150-cards-styled-with-orange-maroon-theme-3-an-online-booking-form-with-fields-name-text-contact-tel-test-selection-multi-select-from-the-listed-tests-date-time-date-time-inputs-prescription-upload-file-input-on-submit-display-a-success-confirmation-message-no-backend-call",
+      "title": "Build the Pathology Services page ('/pathology'). Include: (1) A hero section with animated lab beaker/flask SVG or Lucide icons using Framer Motion. (2) A card-based pricing table for blood tests: CBC (₹200), Lipid Profile (₹500), Blood Sugar Fasting (₹80), Blood Sugar PP (₹80), HbA1c (₹350), Thyroid Profile (₹450), Liver Function Test (₹600), Kidney Function Test (₹600), Complete Hemogram (₹300); and urine tests: Routine Urine Examination (₹100), Urine Culture & Sensitivity (₹400), Urine Pregnancy Test (₹150). Cards styled with orange/maroon theme. (3) An online booking form with fields: Name (text), Contact (tel), Test Selection (multi-select from the listed tests), Date & Time (date + time inputs), Prescription Upload (file input). On submit, display a success confirmation message (no backend call).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-ultrasound-services-page-ultrasound-include-1-a-hero-section-with-animated-ultrasound-wave-svg-graphics-using-framer-motion-2-a-services-pricing-section-with-cards-abdominal-ultrasound-800-pelvic-ultrasound-700-obstetric-ultrasound-900-whole-abdomen-1000-kub-ultrasound-700-neck-ultrasound-700-breast-ultrasound-700-scrotal-ultrasound-700-doppler-study-1200-3-an-appointment-booking-form-with-fields-name-text-contact-tel-service-selection-select-dropdown-from-the-listed-services-date-time-date-time-inputs-notes-textarea-on-submit-show-a-success-message-4-a-safety-hygiene-highlights-section-with-icons-5-a-trained-staff-section-with-brief-descriptive-text",
+      "title": "Build the Ultrasound Services page ('/ultrasound'). Include: (1) A hero section with animated ultrasound wave SVG graphics using Framer Motion. (2) A services pricing section with cards: Abdominal Ultrasound (₹800), Pelvic Ultrasound (₹700), Obstetric Ultrasound (₹900), Whole Abdomen (₹1000), KUB Ultrasound (₹700), Neck Ultrasound (₹700), Breast Ultrasound (₹700), Scrotal Ultrasound (₹700), Doppler Study (₹1200). (3) An appointment booking form with fields: Name (text), Contact (tel), Service Selection (select/dropdown from the listed services), Date & Time (date + time inputs), Notes (textarea). On submit, show a success message. (4) A safety & hygiene highlights section with icons. (5) A trained staff section with brief descriptive text.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-our-doctors-page-doctors-display-8-doctor-cards-in-a-responsive-grid-each-card-contains-an-avatar-image-loaded-from-https-ui-avatars-com-api-name-doctor-name-background-991b1b-color-fff-size-200-replacing-doctor-name-with-the-doctor-s-name-url-encoded-the-doctor-s-name-a-specialization-badge-a-brief-auto-generated-bio-1-2-sentences-and-a-call-now-button-linking-to-tel-9931918438-apply-framer-motion-hover-effects-scale-shadow-to-each-card-doctors-1-dr-swati-lal-gynaecologist-2-dr-faruque-child-specialist-diabetic-specialist-general-physician-3-dr-parmeshwar-lal-senior-general-physician-4-dr-rahul-yogendar-raj-orthopaedic-specialist-5-dr-anup-tirkey-dermatologist-cosmetic-specialist-6-dr-sk-choudhary-senior-dermatologist-7-dr-rl-munda-senior-general-physician-child-specialist-8-dr-mayank-sahan-sharma-gastroenterologist",
+      "title": "Build the Our Doctors page ('/doctors'). Display 8 doctor cards in a responsive grid. Each card contains: an avatar image loaded from https://ui-avatars.com/api/?name=DOCTOR_NAME&background=991B1B&color=fff&size=200 (replacing DOCTOR_NAME with the doctor's name URL-encoded), the doctor's name, a specialization badge, a brief auto-generated bio (1–2 sentences), and a 'Call Now' button linking to tel:9931918438. Apply Framer Motion hover effects (scale + shadow) to each card. Doctors: (1) Dr. Swati Lal – Gynaecologist, (2) Dr. Faruque – Child Specialist, Diabetic Specialist, General Physician, (3) Dr. Parmeshwar Lal – Senior General Physician, (4) Dr. Rahul Yogendar Raj – Orthopaedic Specialist, (5) Dr. Anup Tirkey – Dermatologist & Cosmetic Specialist, (6) Dr. SK Choudhary – Senior Dermatologist, (7) Dr. RL Munda – Senior General Physician & Child Specialist, (8) Dr. Mayank Sahan Sharma – Gastroenterologist.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-framer-motion-page-transition-animations-globally-so-each-route-change-fades-slides-in-the-new-page-content-ensure-all-pages-are-fully-mobile-first-responsive-using-tailwind-css-responsive-prefixes-sm-md-lg-all-forms-must-use-controlled-react-state-with-validation-feedback-and-a-visible-success-state-on-submission",
+      "title": "Apply Framer Motion page transition animations globally so each route change fades/slides in the new page content. Ensure all pages are fully mobile-first responsive using Tailwind CSS responsive prefixes (sm:, md:, lg:). All forms must use controlled React state with validation feedback and a visible success state on submission.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home page with animated hero, service cards, testimonials, newsletter signup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Medicine Services page with delivery form and animated process steps",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Pathology Services page with pricing table and booking form",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Ultrasound Services page with pricing, booking form, and safety highlights",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Our Doctors page with 8 doctor cards, avatars, bios, and Call Now buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Global sticky header, footer, floating contact button, and heartbeat SVG animation",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "City Pharma and Diagnostic Centre",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

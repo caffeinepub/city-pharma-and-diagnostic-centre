@@ -1,0 +1,251 @@
+{
+  "kind": "build_request",
+  "title": "City Pharma and Diagnostic Centre — Full Multi-Page Website",
+  "projectName": "City Pharma Centre",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Configure Tailwind CSS with a custom theme extending colors: orange shades (#EA580C as orange-600, #F97316 as orange-500) and maroon shades (#7F1D1D as maroon-900, #991B1B as maroon-800, #B91C1C as maroon-700). Install and configure Framer Motion and Lucide React as dependencies. Set up React Router v6 with routes for '/', '/medicine', '/pathology', '/ultrasound', and '/doctors'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Tailwind CSS with a custom color palette of orange (#EA580C, #F97316) and maroon (#7F1D1D, #991B1B, #B91C1C)",
+          "React 18 + React Router v6",
+          "Framer Motion for all page transitions and element animations",
+          "Lucide React for icons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "tailwind.config extends theme with the specified orange and maroon color values",
+        "React Router v6 is configured with all 5 routes rendering their respective page components",
+        "Framer Motion and Lucide React are importable without errors"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a global sticky header component that displays the logo text 'CITY PHARMA' on the left, navigation links to all 5 pages (Home, Medicine, Pathology, Ultrasound, Doctors) on desktop, and a hamburger menu toggling a mobile nav drawer on small screens. Include a continuously animating SVG heartbeat polyline in the header. Style with the orange/maroon palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Sticky Header: Logo 'CITY PHARMA' with nav links to all 5 pages, mobile hamburger menu",
+          "Heartbeat animation: SVG polyline in header or hero that animates continuously"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header is sticky (fixed to top) on scroll",
+        "All 5 nav links navigate to their correct routes via React Router",
+        "Hamburger menu appears on mobile and toggles a nav drawer",
+        "SVG heartbeat polyline animates continuously using stroke-dasharray/stroke-dashoffset"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a global footer component with: the centre name and address, phone number 9931918438 as a clickable tel: link, quick links to all 5 pages, and social media placeholder icons (Facebook, Instagram, Twitter) using Lucide React. Style consistently with the orange/maroon theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Footer: Address, phone 9931918438, quick links, social icons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer renders address and clickable phone link tel:9931918438",
+        "Quick links navigate correctly via React Router",
+        "Social icons are present (can be placeholder hrefs)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a globally rendered floating contact button fixed to the bottom-right corner: an orange circle containing a phone icon (Lucide React), linking to tel:9931918438. Animate it with a subtle pulse using Framer Motion.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Floating Contact Button: Fixed bottom-right, orange circle with phone icon, links to tel:9931918438"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Button is fixed at bottom-right and visible on all pages",
+        "Clicking it triggers tel:9931918438",
+        "Pulse animation is visible using Framer Motion"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build the Home page ('/'). Include: (1) A hero banner with animated SVG medical graphics — floating pills, a stethoscope icon, and a heartbeat line animated via SVG stroke-dasharray/stroke-dashoffset using Framer Motion — plus introductory text emphasizing quality healthcare. (2) The phone number 9931918438 prominently displayed. (3) Three CTA buttons: 'Book Now' (links to /pathology), 'Contact Us' (links to tel:9931918438), 'Order Medicine' (links to /medicine). (4) Four quick-access service cards for Medicine, Pathology, Ultrasound, and Doctor Consultation, each with a Lucide React icon and a React Router link to the corresponding page. (5) A testimonials section with 3 patient quotes. (6) A newsletter signup section with an email input and submit button (frontend-only, shows success message on submit).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Hero banner with animated medical SVG graphics",
+          "Centre introduction text emphasizing quality healthcare",
+          "4 quick-access service cards",
+          "Contact phone number 9931918438 prominently displayed",
+          "CTA buttons: 'Book Now', 'Contact Us', 'Order Medicine'",
+          "Testimonials section with 3 patient quotes",
+          "Newsletter signup input"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero SVG animations play on mount using Framer Motion",
+        "Phone number 9931918438 is visible and clickable",
+        "All 3 CTA buttons link to their correct targets",
+        "4 service cards display with icons and route correctly",
+        "3 testimonial quotes are displayed",
+        "Newsletter input submits and shows a success message without page reload"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build the Medicine Services page ('/medicine'). Include: (1) A hero section with animated delivery truck and pill SVG/Lucide icons using Framer Motion. (2) A service description with an animated pulsing badge reading 'Free Delivery within 20 km'. (3) A medicine request form with fields: Name (text), Contact Number (tel), Address (textarea), Medicine Name (text), Prescription Upload (file input), Preferred Delivery Time (time or select). On submit, show a success confirmation message (no backend call). (4) An animated delivery process steps section showing icons with connecting arrows (e.g., Order → Verify → Pack → Deliver) animated with Framer Motion.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Medicine Services Page (/medicine)",
+          "Free Delivery within 20 km badge (animated pulse)",
+          "Medicine request form with fields: Name, Contact Number, Address, Medicine Name, Prescription Upload (file input), Preferred Delivery Time",
+          "Animated delivery process steps (icons with connecting arrows)",
+          "Form submit shows success message"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero animations play on page load",
+        "'Free Delivery within 20 km' badge has a visible pulse animation",
+        "All 6 form fields are present and controlled via React state",
+        "Submitting the form shows a success message and clears/disables the form",
+        "Delivery process steps animate sequentially with Framer Motion"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build the Pathology Services page ('/pathology'). Include: (1) A hero section with animated lab beaker/flask SVG or Lucide icons using Framer Motion. (2) A card-based pricing table for blood tests: CBC (₹200), Lipid Profile (₹500), Blood Sugar Fasting (₹80), Blood Sugar PP (₹80), HbA1c (₹350), Thyroid Profile (₹450), Liver Function Test (₹600), Kidney Function Test (₹600), Complete Hemogram (₹300); and urine tests: Routine Urine Examination (₹100), Urine Culture & Sensitivity (₹400), Urine Pregnancy Test (₹150). Cards styled with orange/maroon theme. (3) An online booking form with fields: Name (text), Contact (tel), Test Selection (multi-select from the listed tests), Date & Time (date + time inputs), Prescription Upload (file input). On submit, display a success confirmation message (no backend call).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Pathology Services Page (/pathology)",
+          "Animated lab beaker/flask icons in hero",
+          "Pricing table for blood tests",
+          "Urine tests",
+          "Online booking form: Name, Contact, Test Selection (multi-select), Date & Time, Prescription Upload",
+          "Modern card-based pricing layout with orange/maroon theme"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 9 blood tests and 3 urine tests appear with correct names and prices",
+        "Pricing cards use the orange/maroon color palette",
+        "All 5 form fields are present and functional",
+        "Multi-select allows selecting multiple tests",
+        "Form submission shows a success message"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build the Ultrasound Services page ('/ultrasound'). Include: (1) A hero section with animated ultrasound wave SVG graphics using Framer Motion. (2) A services pricing section with cards: Abdominal Ultrasound (₹800), Pelvic Ultrasound (₹700), Obstetric Ultrasound (₹900), Whole Abdomen (₹1000), KUB Ultrasound (₹700), Neck Ultrasound (₹700), Breast Ultrasound (₹700), Scrotal Ultrasound (₹700), Doppler Study (₹1200). (3) An appointment booking form with fields: Name (text), Contact (tel), Service Selection (select/dropdown from the listed services), Date & Time (date + time inputs), Notes (textarea). On submit, show a success message. (4) A safety & hygiene highlights section with icons. (5) A trained staff section with brief descriptive text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Ultrasound Services Page (/ultrasound)",
+          "Animated ultrasound wave graphics",
+          "Services with prices",
+          "Appointment booking form: Name, Contact, Service Selection, Date & Time, Notes",
+          "Safety & hygiene highlights with icons",
+          "Trained staff section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 9 ultrasound services are displayed with correct prices",
+        "Appointment form has all 5 fields and is fully controlled",
+        "Form submission shows a success message",
+        "Safety & hygiene section renders with at least 3 highlight icons",
+        "Trained staff section is present"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build the Our Doctors page ('/doctors'). Display 8 doctor cards in a responsive grid. Each card contains: an avatar image loaded from https://ui-avatars.com/api/?name=DOCTOR_NAME&background=991B1B&color=fff&size=200 (replacing DOCTOR_NAME with the doctor's name URL-encoded), the doctor's name, a specialization badge, a brief auto-generated bio (1–2 sentences), and a 'Call Now' button linking to tel:9931918438. Apply Framer Motion hover effects (scale + shadow) to each card. Doctors: (1) Dr. Swati Lal – Gynaecologist, (2) Dr. Faruque – Child Specialist, Diabetic Specialist, General Physician, (3) Dr. Parmeshwar Lal – Senior General Physician, (4) Dr. Rahul Yogendar Raj – Orthopaedic Specialist, (5) Dr. Anup Tirkey – Dermatologist & Cosmetic Specialist, (6) Dr. SK Choudhary – Senior Dermatologist, (7) Dr. RL Munda – Senior General Physician & Child Specialist, (8) Dr. Mayank Sahan Sharma – Gastroenterologist.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Our Doctors Page (/doctors)",
+          "Showcase 8 doctors in responsive card grid",
+          "avatar with colored initials",
+          "name, specialization badge, brief bio, 'Call Now' button linking to tel:9931918438",
+          "Animated specialty icons using Framer Motion hover effects",
+          "Generate placeholder avatar images using https://ui-avatars.com/api/"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 8 doctors are displayed with their correct names and specializations",
+        "Avatar images load from ui-avatars.com with the maroon background parameter",
+        "'Call Now' button on each card links to tel:9931918438",
+        "Framer Motion hover scale/shadow animation is applied to each card",
+        "Grid is responsive: 1 column on mobile, 2 on tablet, 3–4 on desktop"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Apply Framer Motion page transition animations globally so each route change fades/slides in the new page content. Ensure all pages are fully mobile-first responsive using Tailwind CSS responsive prefixes (sm:, md:, lg:). All forms must use controlled React state with validation feedback and a visible success state on submission.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Framer Motion for all page transitions and element animations",
+          "Fully responsive: mobile-first",
+          "All forms are frontend-only with controlled state and success message on submit"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating between routes triggers a visible Framer Motion transition animation",
+        "All pages render correctly without horizontal overflow on a 375px viewport",
+        "Every form on the site shows a success message after submission without a page reload"
+      ]
+    }
+  ],
+  "constraints": [
+    "All forms are frontend-only — no backend canister calls for form submissions",
+    "Phone number 9931918438 must be used consistently across all pages and links",
+    "Avatar images must use the ui-avatars.com URL pattern with background=991B1B&color=fff&size=200",
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui",
+    "Use import.meta.env pattern for any environment variables (Vite-based setup)"
+  ],
+  "nonGoals": [
+    "Backend Motoko canister logic or data persistence",
+    "Internet Identity or any authentication",
+    "Real payment processing",
+    "Actual prescription or file upload processing (file input is UI-only)",
+    "Real-time features or WebSockets",
+    "Email or SMS notifications from form submissions",
+    "External API integrations beyond ui-avatars.com image URLs"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

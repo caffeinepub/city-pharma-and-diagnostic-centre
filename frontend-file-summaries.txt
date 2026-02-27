@@ -1,0 +1,14 @@
+{
+  "frontend/src/index.css": "Global CSS with OKLCH color tokens for orange/maroon brand palette, custom keyframe animations (heartbeat SVG dash, float, pulse-ring, wave, fade-in-up, page-transition, delivery steps), and Google Fonts import for Inter and Poppins.",
+  "frontend/tailwind.config.js": "Tailwind config extended with Inter/Poppins font families, brand orange (#EA580C, #F97316) and maroon (#7F1D1D, #991B1B, #B91C1C) color tokens, and custom box-shadow utilities.",
+  "frontend/src/App.tsx": "Root app using TanStack Router with code-based routing — defines 5 routes (/, /medicine, /pathology, /ultrasound, /doctors) under a root layout that renders Header, Footer, FloatingContactButton, and an Outlet for page content.",
+  "frontend/src/components/Header.tsx": "Sticky header using TanStack Router's Link and useRouterState for active route detection, with animated SVG heartbeat, desktop nav, and mobile hamburger drawer.",
+  "frontend/src/components/Footer.tsx": "Footer using TanStack Router's Link for quick navigation, with brand info, phone link, social icons (react-icons/si), and caffeine.ai attribution.",
+  "frontend/src/components/FloatingContactButton.tsx": "Fixed bottom-right floating phone button with dual pulse-ring CSS animations linking to tel:9931918438.",
+  "frontend/src/pages/Home.tsx": "Home page using TanStack Router's Link for CTA and service card navigation, with animated hero, feature strip, service cards, testimonials, and newsletter signup.",
+  "frontend/src/pages/Medicine.tsx": "Medicine services page with animated hero, pulsing free-delivery badge, 4-step delivery process with staggered animations, and a 6-field controlled medicine order form with success state.",
+  "frontend/src/pages/Pathology.tsx": "Pathology page with animated hero, blood test (9 items) and urine test (3 items) pricing cards, and a booking form with multi-select checkboxes, date/time, and prescription upload.",
+  "frontend/src/pages/Ultrasound.tsx": "Ultrasound page with animated wave hero, 9-service pricing grid, appointment booking form, 6-item safety/hygiene highlights, and trained staff stats section.",
+  "frontend/src/pages/Doctors.tsx": "Doctors page with 8 doctor cards in responsive grid (1→2→3→4 columns), ui-avatars.com avatars with maroon background, specialization badges, bios, and Call Now buttons.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks; no backend queries needed for this frontend-only application."
+}

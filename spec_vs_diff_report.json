@@ -1,0 +1,144 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T06:46:46.415Z",
+  "summary": "The diff implements a comprehensive multi-page website for City Pharma and Diagnostic Centre. Most requirements are substantially implemented, but several specific acceptance criteria are only partially or not met. Key issues include: use of TanStack Router instead of React Router v6 as specified; Framer Motion is not actually imported or used anywhere in the diff (animations are CSS-based instead); color tokens are namespaced under 'brand' rather than extending the top-level 'orange'/'maroon' keys; and page transition animations via Framer Motion are absent.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Set up React Router v6 with routes for '/', '/medicine', '/pathology', '/ultrasound', and '/doctors'",
+      "reason": "The diff uses TanStack Router (createRootRoute, createRoute, RouterProvider from '@tanstack/react-router'), not React Router v6 as specified.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "Configure Tailwind CSS extending colors with orange shades as 'orange-600' and 'orange-500' and maroon shades as 'maroon-900', 'maroon-800', 'maroon-700' at the top level",
+      "reason": "The tailwind.config.js places the brand colors under 'brand.orange' and 'brand.maroon' namespaces rather than extending the standard 'orange' and 'maroon' top-level color keys as specified.",
+      "evidence": [
+        "frontend/tailwind.config.js"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "Framer Motion is installed and importable without errors",
+      "reason": "No import of 'framer-motion' appears in any of the diff files. All animations are implemented using CSS keyframes and Tailwind classes instead.",
+      "evidence": [
+        "frontend/src/components/FloatingContactButton.tsx",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/Doctors.tsx",
+        "frontend/src/pages/Medicine.tsx",
+        "frontend/src/pages/Pathology.tsx",
+        "frontend/src/pages/Ultrasound.tsx"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Animate the floating contact button with a subtle pulse using Framer Motion",
+      "reason": "The FloatingContactButton uses CSS 'animate-pulse-ring' class animations, not Framer Motion as required.",
+      "evidence": [
+        "frontend/src/components/FloatingContactButton.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Hero SVG animations play on mount using Framer Motion including floating pills, stethoscope icon, and heartbeat line animated via SVG stroke-dasharray/stroke-dashoffset",
+      "reason": "Home page uses CSS animation classes (animate-float, animate-float-delayed) instead of Framer Motion. No framer-motion import is present.",
+      "evidence": [
+        "frontend/src/pages/Home.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Hero animations play on page load using Framer Motion; delivery process steps animate sequentially with Framer Motion",
+      "reason": "Medicine page uses CSS animation classes instead of Framer Motion. No framer-motion import is present in Medicine.tsx.",
+      "evidence": [
+        "frontend/src/pages/Medicine.tsx"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Hero section with animated lab beaker/flask using Framer Motion",
+      "reason": "Pathology page uses CSS animation classes (animate-float, animate-float-delayed, animate-float-slow) instead of Framer Motion.",
+      "evidence": [
+        "frontend/src/pages/Pathology.tsx"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Hero section with animated ultrasound wave SVG graphics using Framer Motion",
+      "reason": "Ultrasound page uses CSS animation classes instead of Framer Motion. No framer-motion import is present.",
+      "evidence": [
+        "frontend/src/pages/Ultrasound.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Apply Framer Motion hover effects (scale + shadow) to each doctor card",
+      "reason": "Doctor cards use CSS class 'card-hover group' for hover effects rather than Framer Motion whileHover animations.",
+      "evidence": [
+        "frontend/src/pages/Doctors.tsx"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "Apply Framer Motion page transition animations globally so each route change fades/slides in the new page content",
+      "reason": "The App.tsx applies a CSS class 'page-transition' to the main element but no AnimatePresence or motion components from framer-motion are used for route transitions.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "TanStack Router used instead of React Router v6",
+      "reason": "The build request explicitly requires React Router v6. TanStack Router is a different library that was not requested.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/pages/Home.tsx"
+      ]
+    },
+    {
+      "description": "react-icons/si library used for social media icons (SiFacebook, SiInstagram, SiX) in Footer",
+      "reason": "The build request specifies using Lucide React for social media placeholder icons. react-icons is an additional dependency not requested.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "InternetIdentityProvider wrapping the entire App in main.tsx",
+      "reason": "Internet Identity or any authentication is explicitly listed as a non-goal. Wrapping the app in InternetIdentityProvider adds authentication scaffolding not required by this build.",
+      "evidence": [
+        "frontend/src/main.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/FloatingContactButton.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/Doctors.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/Medicine.tsx",
+    "frontend/src/pages/Pathology.tsx",
+    "frontend/src/pages/Ultrasound.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

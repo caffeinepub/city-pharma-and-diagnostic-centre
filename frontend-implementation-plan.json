@@ -1,0 +1,254 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "City Pharma and Diagnostic Centre — Full Multi-Page Website",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Configure Tailwind CSS with custom orange/maroon theme, install Framer Motion and Lucide React, set up React Router v6 with 5 routes",
+      "acceptanceCriteria": [
+        "tailwind.config extends theme with the specified orange and maroon color values",
+        "React Router v6 is configured with all 5 routes rendering their respective page components",
+        "Framer Motion and Lucide React are importable without errors"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/package.json",
+          "operation": "modify",
+          "description": "Add framer-motion, lucide-react, and react-router-dom dependencies if not already present"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend theme.colors with orange-600: #EA580C, orange-500: #F97316, maroon-900: #7F1D1D, maroon-800: #991B1B, maroon-700: #B91C1C"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace existing content with BrowserRouter, Routes, and Route definitions for paths '/', '/medicine', '/pathology', '/ultrasound', '/doctors' rendering Home, Medicine, Pathology, Ultrasound, and Doctors page components respectively"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create Home page component skeleton (will be populated in REQ-5)"
+        },
+        {
+          "path": "frontend/src/pages/Medicine.tsx",
+          "operation": "create",
+          "description": "Create Medicine page component skeleton (will be populated in REQ-6)"
+        },
+        {
+          "path": "frontend/src/pages/Pathology.tsx",
+          "operation": "create",
+          "description": "Create Pathology page component skeleton (will be populated in REQ-7)"
+        },
+        {
+          "path": "frontend/src/pages/Ultrasound.tsx",
+          "operation": "create",
+          "description": "Create Ultrasound page component skeleton (will be populated in REQ-8)"
+        },
+        {
+          "path": "frontend/src/pages/Doctors.tsx",
+          "operation": "create",
+          "description": "Create Doctors page component skeleton (will be populated in REQ-9)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create global sticky header with logo, navigation links, mobile hamburger menu, and animated SVG heartbeat polyline",
+      "acceptanceCriteria": [
+        "Header is sticky (fixed to top) on scroll",
+        "All 5 nav links navigate to their correct routes via React Router",
+        "Hamburger menu appears on mobile and toggles a nav drawer",
+        "SVG heartbeat polyline animates continuously using stroke-dasharray/stroke-dashoffset"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create sticky header component with 'CITY PHARMA' logo text, desktop navigation links (Home, Medicine, Pathology, Ultrasound, Doctors) using React Router Link, mobile hamburger button toggling a state-controlled drawer, and an SVG heartbeat polyline animated continuously with Framer Motion stroke-dasharray/stroke-dashoffset keyframes. Style with orange/maroon Tailwind classes and position:sticky"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Header component above the Routes so it appears globally on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create global footer with centre info, phone link, quick links, and social icons",
+      "acceptanceCriteria": [
+        "Footer renders address and clickable phone link tel:9931918438",
+        "Quick links navigate correctly via React Router",
+        "Social icons are present (can be placeholder hrefs)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create footer component displaying centre name and address, phone number 9931918438 as <a href='tel:9931918438'>, quick links (Home, Medicine, Pathology, Ultrasound, Doctors) using React Router Link, and placeholder social media icons (Facebook, Instagram, Twitter) from Lucide React. Style consistently with orange/maroon theme"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Footer component below the Routes so it appears globally on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create globally rendered floating contact button fixed to bottom-right with phone icon and pulse animation",
+      "acceptanceCriteria": [
+        "Button is fixed at bottom-right and visible on all pages",
+        "Clicking it triggers tel:9931918438",
+        "Pulse animation is visible using Framer Motion"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FloatingContactButton.tsx",
+          "operation": "create",
+          "description": "Create a floating contact button component: fixed position bottom-right (e.g., bottom-6 right-6), orange circular button containing a phone icon from Lucide React, wrapping <a href='tel:9931918438'>. Apply Framer Motion animate prop with a subtle pulse scale animation repeating infinitely"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render FloatingContactButton component at the root level (after Header, before Routes) so it is globally visible"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Home page with hero banner (animated SVG medical graphics), phone number, 3 CTA buttons, 4 service cards, testimonials, and newsletter signup",
+      "acceptanceCriteria": [
+        "Hero SVG animations play on mount using Framer Motion",
+        "Phone number 9931918438 is visible and clickable",
+        "All 3 CTA buttons link to their correct targets",
+        "4 service cards display with icons and route correctly",
+        "3 testimonial quotes are displayed",
+        "Newsletter input submits and shows a success message without page reload"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Replace skeleton with full Home page: (1) Hero banner section with animated SVG graphics (floating pills, stethoscope icon, heartbeat line using stroke-dasharray/stroke-dashoffset animated via Framer Motion) and introductory text emphasizing quality healthcare. (2) Display phone number 9931918438 prominently (clickable tel: link). (3) Three CTA buttons: 'Book Now' (React Router Link to /pathology), 'Contact Us' (<a href='tel:9931918438'>), 'Order Medicine' (Link to /medicine). (4) Four service cards (Medicine, Pathology, Ultrasound, Doctor Consultation) each with a Lucide React icon and Link to the corresponding page. (5) Testimonials section with 3 patient quotes hard-coded. (6) Newsletter signup form with controlled email input state and a submit handler that prevents default, sets a success message state, and clears the input"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Medicine Services page with animated hero, 'Free Delivery' badge, medicine request form, and animated delivery process steps",
+      "acceptanceCriteria": [
+        "Hero animations play on page load",
+        "'Free Delivery within 20 km' badge has a visible pulse animation",
+        "All 6 form fields are present and controlled via React state",
+        "Submitting the form shows a success message and clears/disables the form",
+        "Delivery process steps animate sequentially with Framer Motion"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Medicine.tsx",
+          "operation": "modify",
+          "description": "Replace skeleton with full Medicine Services page: (1) Hero section with animated delivery truck and pill SVG/Lucide icons using Framer Motion. (2) Service description with an animated pulsing badge reading 'Free Delivery within 20 km' (Framer Motion scale pulse). (3) Medicine request form with 6 controlled fields: Name (text), Contact Number (tel), Address (textarea), Medicine Name (text), Prescription Upload (file input), Preferred Delivery Time (time or select). On submit, preventDefault, show success confirmation message, clear form state. (4) Animated delivery process steps section showing icons with connecting arrows (Order → Verify → Pack → Deliver) animated sequentially with Framer Motion staggerChildren/transition delays"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build Pathology Services page with animated hero, pricing cards for blood and urine tests, and online booking form",
+      "acceptanceCriteria": [
+        "All 9 blood tests and 3 urine tests appear with correct names and prices",
+        "Pricing cards use the orange/maroon color palette",
+        "All 5 form fields are present and functional",
+        "Multi-select allows selecting multiple tests",
+        "Form submission shows a success message"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Pathology.tsx",
+          "operation": "modify",
+          "description": "Replace skeleton with full Pathology Services page: (1) Hero section with animated lab beaker/flask SVG or Lucide icons using Framer Motion. (2) Card-based pricing table for blood tests (CBC ₹200, Lipid Profile ₹500, Blood Sugar Fasting ₹80, Blood Sugar PP ₹80, HbA1c ₹350, Thyroid Profile ₹450, Liver Function Test ₹600, Kidney Function Test ₹600, Complete Hemogram ₹300) and urine tests (Routine Urine Examination ₹100, Urine Culture & Sensitivity ₹400, Urine Pregnancy Test ₹150), styled with orange/maroon Tailwind classes. (3) Online booking form with 5 controlled fields: Name (text), Contact (tel), Test Selection (multi-select using checkboxes or a multi-select component from the listed tests), Date & Time (date + time inputs), Prescription Upload (file input). On submit, preventDefault, show success message"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Ultrasound Services page with animated hero, pricing cards for 9 ultrasound services, appointment form, safety highlights, and trained staff section",
+      "acceptanceCriteria": [
+        "All 9 ultrasound services are displayed with correct prices",
+        "Appointment form has all 5 fields and is fully controlled",
+        "Form submission shows a success message",
+        "Safety & hygiene section renders with at least 3 highlight icons",
+        "Trained staff section is present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Ultrasound.tsx",
+          "operation": "modify",
+          "description": "Replace skeleton with full Ultrasound Services page: (1) Hero section with animated ultrasound wave SVG graphics using Framer Motion. (2) Services pricing section with cards: Abdominal Ultrasound ₹800, Pelvic Ultrasound ₹700, Obstetric Ultrasound ₹900, Whole Abdomen ₹1000, KUB Ultrasound ₹700, Neck Ultrasound ₹700, Breast Ultrasound ₹700, Scrotal Ultrasound ₹700, Doppler Study ₹1200. (3) Appointment booking form with 5 controlled fields: Name (text), Contact (tel), Service Selection (select/dropdown from the listed services), Date & Time (date + time inputs), Notes (textarea). On submit, preventDefault, show success message. (4) Safety & hygiene highlights section with at least 3 icons from Lucide React. (5) Trained staff section with brief descriptive text"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Our Doctors page displaying 8 doctor cards in responsive grid with avatar images, names, specializations, bios, and 'Call Now' buttons",
+      "acceptanceCriteria": [
+        "All 8 doctors are displayed with their correct names and specializations",
+        "Avatar images load from ui-avatars.com with the maroon background parameter",
+        "'Call Now' button on each card links to tel:9931918438",
+        "Framer Motion hover scale/shadow animation is applied to each card",
+        "Grid is responsive: 1 column on mobile, 2 on tablet, 3–4 on desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Doctors.tsx",
+          "operation": "modify",
+          "description": "Replace skeleton with full Our Doctors page: Display 8 doctor cards in a responsive grid (grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4). Each card contains: avatar image loaded from https://ui-avatars.com/api/?name=DOCTOR_NAME&background=991B1B&color=fff&size=200 (replace DOCTOR_NAME with URL-encoded doctor name), doctor's name, specialization badge, brief auto-generated bio (1–2 sentences), and a 'Call Now' button (<a href='tel:9931918438'>). Wrap each card in a Framer Motion motion.div with whileHover scale and shadow animation. Doctors: (1) Dr. Swati Lal – Gynaecologist, (2) Dr. Faruque – Child Specialist, Diabetic Specialist, General Physician, (3) Dr. Parmeshwar Lal – Senior General Physician, (4) Dr. Rahul Yogendar Raj – Orthopaedic Specialist, (5) Dr. Anup Tirkey – Dermatologist & Cosmetic Specialist, (6) Dr. SK Choudhary – Senior Dermatologist, (7) Dr. RL Munda – Senior General Physician & Child Specialist, (8) Dr. Mayank Sahan Sharma – Gastroenterologist"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Apply Framer Motion page transition animations globally, ensure all pages are mobile-first responsive, and all forms show success state on submission",
+      "acceptanceCriteria": [
+        "Navigating between routes triggers a visible Framer Motion transition animation",
+        "All pages render correctly without horizontal overflow on a 375px viewport",
+        "Every form on the site shows a success message after submission without a page reload"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap the Routes component with AnimatePresence from Framer Motion and wrap each Route element with a motion.div that has exit, initial, and animate props to fade/slide in the page content on route change. Use location key to trigger transitions"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global responsive utilities or reset styles if needed to ensure mobile-first behavior. Verify Tailwind @tailwind directives are present and no hardcoded widths cause overflow"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Review and ensure newsletter form submission shows a visible success message state and applies mobile-first responsive Tailwind classes (sm:, md:, lg:) throughout the layout"
+        },
+        {
+          "path": "frontend/src/pages/Medicine.tsx",
+          "operation": "modify",
+          "description": "Review and ensure form submission shows a visible success message and form is cleared/disabled, apply mobile-first responsive Tailwind classes throughout"
+        },
+        {
+          "path": "frontend/src/pages/Pathology.tsx",
+          "operation": "modify",
+          "description": "Review and ensure form submission shows a visible success message, apply mobile-first responsive Tailwind classes throughout"
+        },
+        {
+          "path": "frontend/src/pages/Ultrasound.tsx",
+          "operation": "modify",
+          "description": "Review and ensure form submission shows a visible success message, apply mobile-first responsive Tailwind classes throughout"
+        }
+      ]
+    }
+  ]
+}

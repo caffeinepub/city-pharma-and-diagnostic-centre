@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (Tailwind config, header, footer, floating button, routing) to their source files, components, and test IDs with confidence levels.",
+  "frontend-file-summaries.txt": "JSON document containing one-line summaries of each frontend source file, describing their purpose and key implementation details.",
+  "frontend/index.css": "Tailwind base CSS file defining OKLCH-based CSS custom properties for light and dark theme color tokens (background, foreground, primary, chart colors, sidebar, etc.).",
+  "frontend/index.html": "HTML entry point for the City Pharma and Diagnostic Centre app, mounting the React app at the root div and loading the main TSX module.",
+  "frontend/src/App.tsx": "Root app component using TanStack Router to define five routes (/, /medicine, /pathology, /ultrasound, /doctors) within a root layout that renders Header, Footer, FloatingContactButton, and page content via Outlet.",
+  "frontend/src/components/FloatingContactButton.tsx": "Fixed bottom-right floating phone button with dual CSS pulse-ring animations that links to tel:9931918438 using an orange-to-maroon gradient circle.",
+  "frontend/src/components/Footer.tsx": "Footer component with brand info, address, clickable phone link, quick navigation links via TanStack Router, service list, and social media icons (Facebook, Instagram, X) styled with a maroon gradient.",
+  "frontend/src/components/Header.tsx": "Sticky header with logo, animated SVG heartbeat polyline (desktop only), active-aware desktop nav links, a phone CTA, and a hamburger-toggled mobile drawer, using TanStack Router for navigation and active state detection.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches a TanStack Query-managed ICP backend actor, returning an anonymous or identity-authenticated actor and invalidating dependent queries when the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication using DFINITY's AuthClient, exposing login/logout functions, identity state, and login status.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file indicating no backend queries are needed, as all forms use local React state.",
+  "frontend/src/index.css": "Global stylesheet that imports Inter and Poppins fonts, configures Tailwind CSS with custom OKLCH-based design tokens for light/dark themes, and defines custom animations like heartbeat, float, and fade-in.",
+  "frontend/src/main.tsx": "Application entry point that renders the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/Doctors.tsx": "Displays a grid of doctor cards for a healthcare center, each showing an avatar, name, specialization badges, and bio for eight listed doctors.",
+  "frontend/src/pages/Home.tsx": "Landing page for City Pharma featuring a hero section, service cards, feature highlights, testimonials, and a newsletter signup form.",
+  "frontend/src/pages/Medicine.tsx": "Medicine ordering page with a hero section, a four-step delivery process illustration, and a form for submitting medicine orders with prescription upload and delivery time selection.",
+  "frontend/src/pages/Pathology.tsx": "Pathology services page listing blood and urine tests with prices, a booking form with test selection checkboxes, date/time inputs, and prescription upload, plus a total price calculator and submission success state.",
+  "frontend/src/pages/Ultrasound.tsx": "Ultrasound services page displaying available scan types with prices, safety/quality highlights, and a booking form with service selection, date/time, and notes fields.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom brand colors (orange and maroon), fonts (Inter, Poppins), box shadows, border radii, and animation keyframes, plus plugins for typography, container queries, and animate.",
+  "project_state.json": "Project state snapshot describing the multi-page React/Tailwind website for CITY PHARMA AND DIAGNOSTIC CENTRE, including architectural notes, existing implemented features, and versioning metadata."
+}
